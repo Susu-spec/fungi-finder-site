@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
 module.exports = {
-    content: ["*"],
+  content: ["./*.html", "./src/**/*.js"],
     theme: {
         extend: {
           colors: {
@@ -33,9 +33,9 @@ module.exports = {
               'headingLg': ['32px', { lineHeight: '35.2px' }],
               'title': ['3.75rem'],
               'titleMd': ['5rem'],
-              'titleSmall': ['5rem', { lineHeight: '5.25rem'}],
+              'titleSmall': ['4.5rem', { lineHeight: '5.25rem'}],
               'heading': ['2.25rem'],
-              'bodyLg': ['1.25rem'],
+              'bodyLg': ['1.25rem', { lineHeight: '2rem'}],
               'bodyMd': ['1.125rem'],
               'bodyReg': ['1rem', { lineHeight: '25.6px'}]
           },
