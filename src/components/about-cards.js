@@ -3,7 +3,7 @@ const aboutArray = [
         sectionClass: 'bg-brown-500',
         containerClass: 'flex',
         image: {
-            img: './src/assets/experts 1.jpg',
+            img: './src/assets/experts-1.jpg',
             alt: 'Photo of Man analysing mushrooms'
         },
         heading: 'Get to know your mushrooms',
@@ -19,7 +19,7 @@ const aboutArray = [
         sectionClass: 'bg-brown-300',
         containerClass: 'flex flex-row-reverse',
         image: {
-            img: './src/assets/nature 1.jpg',
+            img: './src/assets/nature-1.jpg',
             alt: 'Photo of nature with mushrooms'
         },
         heading: 'Connect with nature',
