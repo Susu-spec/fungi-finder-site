@@ -1,5 +1,7 @@
 import expert1 from "../assets/experts-1.jpg?url";
 import expert2 from "../assets/nature-1.jpg?url";
+
+
 const aboutArray = [
   {
     sectionClass: "bg-brown-500",
@@ -34,7 +36,7 @@ const aboutArray = [
 
 function AboutSection(sectionClass, containerClass, image, heading, description, button) {
   return `
-    <section class="${sectionClass}">
+    <div class="${sectionClass}">
         <div class="${containerClass} gap-12 max-w-[80%] mx-auto py-[8rem]">
           <figure class="flex-2 max-w-[35rem]">
             <img class="rounded-lg" src="${image.img}" alt="${image.alt}" />
@@ -52,7 +54,7 @@ function AboutSection(sectionClass, containerClass, image, heading, description,
             }</button>
           </div>
         </div>
-      </section>
+      </div>
     `;
 }
 
