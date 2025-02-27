@@ -20,14 +20,14 @@ const benefits = [
 
 ]
 
-export function JoyCard(image, body, heading) {
+export function JoyCard(image, heading, body) {
     return `
-        <div class="rounded-3xl p-4 gap-4 brown-200 flex flex-col items-center justify-center">
+        <div class="rounded-xl p-4 gap-6 bg-brown-200 flex flex-col justify-center">
             <figure>
-                <img src=${image} alt="Image illustrating benefits" class="rounded-lg"/>
-                <figcaption></figcaption
+                <img src=${image} alt="Image illustrating benefits" class="rounded-lg w-full"/>
+                <figcaption></figcaption>
             </figure>
-            <h2 class="text-orange font-outfit font-bold">${heading}</h2>
+            <h2 class="text-primary font-outfit font-bold text-headingLg">${heading}</h2>
             <p class="font-fira text-gray text-bodyReg">${body}</p>
         </div>
     `

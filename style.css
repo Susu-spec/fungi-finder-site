@@ -13,6 +13,11 @@ h1 {
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .custom-bg {
+    background-image: url('./src/assets/walking-through.jpg');
+  }
+}
 
 *,
 ::before,
@@ -40,15 +45,6 @@ a {
     cursor: pointer;
 }
 
-.discover-section {
-    background-image: url("./src/assets/walking-through.jpg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    min-height: 100dvh;
-}
 
 
-.max-60 {
-    max-width: 60%;
-  }
   
