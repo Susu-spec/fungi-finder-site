@@ -15,7 +15,7 @@ h1 {
 
 @layer utilities {
   .custom-bg {
-    background-image: url('./src/assets/walking-through.jpg');
+    background-image: url('/src/assets/walking-through.jpg');
   }
 }
 
