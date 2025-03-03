@@ -5,7 +5,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: "index.html",
-        guide: "/public/guide.html",
+        guide: "guide.html",
     },
   },
 }});
