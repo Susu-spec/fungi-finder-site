@@ -31,11 +31,11 @@ const benefits = [
 ];
 
 
-export function JoyCard(image, heading, body) {
+export function JoyCard(image, heading, body, className="flex-col") {
   return `
-        <li class="rounded-xl p-4 gap-6 bg-brown-200 flex flex-col justify-center">
+        <li class="rounded-xl p-4 gap-6 bg-brown-200 flex $${className} justify-center">
             <figure>
-                <img src=${image.img} alt=${image.alt} class="rounded-lg w-full"/>
+                <img src=${image.img} alt=${image.alt} class="rounded-xl w-full"/>
                 <figcaption></figcaption>
             </figure>
             <h2 class="text-primary font-outfit font-bold text-headingLg">${heading}</h2>
