@@ -8,7 +8,7 @@ const aboutArray = [
     containerClass: "flex",
     image: {
       img: expert1,
-      alt: "Photo of Man analysing mushrooms",
+      alt: "Man analysing mushrooms",
     },
     heading: "Get to know your mushrooms",
     description: [
@@ -24,7 +24,7 @@ const aboutArray = [
     containerClass: "flex flex-row-reverse",
     image: {
       img: expert2,
-      alt: "Photo of nature with mushrooms",
+      alt: "Mushrooms in a forest",
     },
     heading: "Connect with nature",
     description: ["Experience the beauty of the great outdoors while foraging for mushrooms with fellow enthusiasts."],
@@ -39,7 +39,7 @@ function AboutSection(sectionClass, containerClass, image, heading, description,
     <div class="${sectionClass}">
         <div class="${containerClass} gap-12 max-w-[80%] mx-auto py-[8rem]">
           <figure class="flex-2 max-w-[35rem]">
-            <img class="rounded-lg" src="${image.img}" alt="${image.alt}" />
+            <img class="rounded-xl" src="${image.img}" alt="${image.alt}" />
           </figure>
           <div class="flex flex-col gap-6 flex-1">
             <div class="flex flex-col gap-6 text-gray">
