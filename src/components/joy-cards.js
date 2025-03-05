@@ -31,15 +31,18 @@ const benefits = [
 ];
 
 
-export function JoyCard(image, heading, body, className="flex-col") {
+export function JoyCard(image, heading, body, className="flex-col", headingClass="text-primary", imageClass="") {
   return `
-        <li class="rounded-xl p-4 gap-6 bg-brown-200 flex $${className} justify-center">
-            <figure>
-                <img src=${image.img} alt=${image.alt} class="rounded-xl w-full"/>
-                <figcaption></figcaption>
-            </figure>
-            <h2 class="text-primary font-outfit font-bold text-headingLg">${heading}</h2>
+        <li class="rounded-xl p-4 gap-6 bg-brown-200 flex ${className} justify-center w-full">
+          <figure class="w-full ${imageClass}">
+            <img src=${image.img} alt=${image.alt} class="rounded-xl w-full"/>
+            <figcaption></figcaption>
+          </figure>
+          <div class="flex flex-col gap-6">
+            <h2 class="${headingClass} font-outfit font-bold text-headingLg">${heading}</h2>
             <p class="font-fira text-gray text-bodyReg">${body}</p>
+          </div>
+          
         </li>
     `;
 }
