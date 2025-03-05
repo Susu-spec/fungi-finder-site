@@ -192,33 +192,7 @@ const guideArray = [
 //     },
 // ]
 
-export default function GuideContent() {
-    const guideGrid = document.getElementById('guide-grid');
-    console.log(guideArray)
-    guideGrid.innerHTML = GuideCards();
-
-    return `
-        <section>
-            <div class="max-w-[80%] mx-auto py-[8rem]">
-                <h1 class="font-bold !text-5xl text-white">Get to know your mushrooms</h1>
-                <span> 
-                    <button class="flex items-center gap-1 text-white font-bold bg-accent py-[0.625rem] px-5 rounded-[0.25rem] max-w-fit">
-                        <span>Season: All</span>
-                        <span><img src="/src/assets/arrow-down.svg" alt="Arrow down button"/></span>
-                    </button>
-                    <button class="flex items-center gap-1 text-white font-bold bg-accent py-[0.625rem] px-5 rounded-[0.25rem] max-w-fit">
-                        <span>Type: All</span>
-                        <span><img src="/src/assets/arrow-down.svg" alt="Arrow down button"/></span>
-                    </button>
-                </span>
-            </div>
-            <div id="guide-grid" class="grid grid-template-columns gap-4 grid-cols-1 md:grid-cols-4"></div>
-        </section>
-    `
-}
-
-function GuideCards({ guideArray }) {
-    console.log(guideArray);
+function GuideCards(guideArray) {
 
     return guideArray.map((guide) => (
         `
@@ -239,3 +213,9 @@ function GuideCards({ guideArray }) {
         `
     )).join("");
 }
+
+export default function GuideContent() {
+    const guideGrid = document.getElementById('guide-grid');
+    guideGrid.innerHTML = GuideCards(guideArray)
+}
+
