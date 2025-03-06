@@ -22,7 +22,7 @@
     <header class="w-full bg-brown-300 ">
       <nav class="w-full max-w-[95%] mx-auto flex justify-between pt-4 pb-3">
         <img src="./src/assets/fungi-finders-heading.svg" alt="FungiFinders logo" />
-        <span class="flex items-center cursor-pointer"  style="gap: 2rem;">
+        <span class="hidden md:flex items-center cursor-pointer"  style="gap: 2rem;">
           <a href="index.html" class="font-semibold text-sm text-gray font-fira">
             Discover
           </a>
@@ -33,19 +33,29 @@
             FAQ
           </a>
         </span>
+        <a id="menuToggle" class="flex items-center justify-center md:hidden cursor-pointer z-10">
+          <img src="./src/assets/hamburger.svg" alt="Hamburger icon for navigation" />
+        </a>
+        <nav id="mobileMenu" class="hidden absolute top-0 right-0 w-full h-full max-w-[16.375rem] max-h-[17.375rem] bg-accent flex flex-col items-center justify-center space-y-6">
+          <a href="/index.html" class="text-white text-bodyLg font-semibold">Discover</a>
+          <hr class="border border-white my-5 mx-auto w-full max-w-[80%]"/>
+          <a href="/guide.html" class="text-white text-bodyLg font-semibold">Mushroom Guide</a>
+          <hr class="border border-white my-5 mx-auto w-full max-w-[80%]"/>
+          <a href="/guide.html#faq-section-container" class="text-white text-bodyLg font-semibold">FAQ</a>
+        </nav>
       </nav>
     </header>
     
     <main>
 
       <section class="custom-bg bg-repeat bg-cover min-h-[100dvh] mx-auto text-center text-white flex flex-col justify-center items-center">
-        <div class="w-full max-w-[80%]">
+        <div class="w-full md:max-w-[80%]">
           <h1 class="m-4">
-            <span class="text-titleSmall !font-bold font-outfit">Discover the World of </span>
+            <span class="text-title md:text-titleSmall !font-bold font-outfit">Discover the World of </span>
             <br />
-            <span class="text-primary text-titleLarge font-bold">Mushroom Foraging</span>
+            <span class="text-title md:text-titleLarge text-primary font-bold">Mushroom Foraging</span>
           </h1> 
-            <p class="body-Lg w-full max-w-[45rem] leading-8 mx-auto">
+            <p class="bodyMd md:body-Lg w-full max-w-[45rem] leading-8 mx-auto">
               Mushroom foraging is the art and science of identifying and collecting wild mushrooms. 
               <br />
               <br />
@@ -57,16 +67,16 @@
         </div>
       </section>
 
-      <section class="max-w-[70rem] mx-auto my-[8rem] flex flex-col gap-8">
-        <h1 class="font-bold font-outfit text-white !text-5xl">The joys of mushroom foraging</h1>
+      <section class="max-w-[90%] md:max-w-[70rem] mx-auto my-[8rem] flex flex-col gap-8">
+        <h1 class="font-bold font-outfit text-white text-heading md:!text-5xl">The joys of mushroom foraging</h1>
         <p class="text-gray body-Lg font-fira">Foraging for mushrooms can be a rewarding experience for many reasons. People may venture off into the woods to forage for mushrooms because it allows them to connect with nature, enjoy the thrill of the hunt, and savor the satisfaction of finding a hidden culinary treasure. </p>
         <div id="joy-card-container"></div>
       </section>
 
       <section class="bg-accent-dark ">
         <div class="w-full text-center text-white max-w-[45rem] mx-auto flex flex-col gap-6 py-[4.5rem]">
-          <h1 class="font-bold !text-5xl">Start your <span class="text-primary">Foraging Adventure!</span></h1>
-          <p class="font-fira body-Lg">Whether you're seeking a deeper connection with nature, a new outdoor hobby, or simply love the idea of finding your own food, mushroom foraging offers a uniquely rewarding experience.</p>
+          <h1 class="font-bold text-heading md:!text-5xl">Start your <span class="text-primary">Foraging Adventure!</span></h1>
+          <p class="font-fira body-Md md:body-Lg">Whether you're seeking a deeper connection with nature, a new outdoor hobby, or simply love the idea of finding your own food, mushroom foraging offers a uniquely rewarding experience.</p>
         </div>
       </section>
 

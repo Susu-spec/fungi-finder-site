@@ -21,7 +21,7 @@
     <header class="w-full bg-brown-300 ">
       <nav class="w-full max-w-[95%] mx-auto flex justify-between pt-4 pb-3">
         <img src="/src/assets/fungi-finders-heading.svg" alt="FungiFinders logo" />
-        <span class="flex items-center cursor-pointer"  style="gap: 2rem;">
+        <span class="hidden md:flex items-center cursor-pointer"  style="gap: 2rem;">
           <a href="/index.html" class="font-semibold text-sm text-gray font-fira">
             Discover
           </a>
@@ -32,17 +32,27 @@
             FAQ
           </a>
         </span>
+        <a id="menuToggle" class="flex items-center justify-center md:hidden cursor-pointer z-10">
+          <img src="./src/assets/hamburger.svg" alt="Hamburger icon for navigation" />
+        </a>
+        <nav id="mobileMenu" class="hidden absolute top-0 right-0 w-full h-full max-w-[16.375rem] max-h-[17.375rem] bg-accent flex flex-col items-center justify-center space-y-6">
+          <a href="/index.html" class="text-white text-bodyLg font-semibold">Discover</a>
+          <hr class="border border-white my-5 mx-auto w-full max-w-[80%]"/>
+          <a href="/guide.html" class="text-white text-bodyLg font-semibold">Mushroom Guide</a>
+          <hr class="border border-white my-5 mx-auto w-full max-w-[80%]"/>
+          <a href="" class="text-white text-bodyLg font-semibold">FAQ</a>
+        </nav>
       </nav>
     </header>
     <main>
       <section class="custom-bg bg-repeat bg-cover min-h-[100dvh] mx-auto text-center text-white flex flex-col justify-center items-center">
-        <div class="w-full max-w-[80%]">
+        <div class="w-full md:max-w-[80%]">
           <h1 class="m-4">
-            <span class="text-titleSmall !font-bold font-outfit">Quick reference</span>
+            <span class="text-title md:text-titleSmall !font-bold font-outfit">Quick reference</span>
             <br />
-            <span class="text-primary text-titleLarge font-bold">Mushroom Guide</span>
+            <span class="text-title md:text-titleLarge text-primary font-bold">Mushroom Guide</span>
           </h1> 
-            <p class="body-Lg w-full max-w-[45rem] leading-8 mx-auto">
+            <p class="bodyMd md:body-Lg w-full max-w-[45rem] tracking-6 mx-auto">
               Discover a wide array of mushrooms from around the world, each with its own unique flavor profile and culinary uses. 
               <br />
               <br />
@@ -53,13 +63,13 @@
         </div>
         
       </section>
-      <section class="bg-accent-dark">
-        <div class="flex gap-12 max-w-[80%] mx-auto py-[8rem]">
-          <figure class="flex-2 max-w-[35rem]">
+      <section class="bg-brown-300 md:bg-accent-dark">
+        <div class="flex flex-col md:flex-row gap-12 max-w-[90%] md:max-w-[80%] mx-auto py-[8rem]">
+          <figure class="flex-2 max-w-full md:max-w-[35rem]">
             <img class="rounded-xl" src="./src/assets/forest-mushroom.jpg" alt="Mushroom in forest" />
           </figure>
-          <div class="flex flex-col gap-6 text-gray justify-center">
-            <h1 class="font-bold !text-5xl text-white">Where to look</h1>
+          <div class="flex flex-col gap-6 text-gray justify-center max-w-full mx-auto">
+            <h1 class="font-bold text-heading md:!text-5xl text-white">Where to look</h1>
             <p class="font-fira">
               <span>
                 Different species grow in different types of environments. 
@@ -77,15 +87,15 @@
           </div>  
 
       </section>
-      <section>
-        <div class="max-w-[80%] mx-auto py-[8rem] flex flex-col gap-5">
-            <h1 class="font-bold !text-5xl text-white">Get to know your mushrooms</h1>
+      <section class="bg-brown-400 md:bg-inherit">
+        <div class="max-w-[90%] md:max-w-[80%] mx-auto py-[3.75rem] md:py-[4.5rem] flex flex-col gap-5">
+            <h1 class="font-bold text-heading md:!text-5xl text-white">Get to know your mushrooms</h1>
             <span class="flex gap-2"> 
-                <button class="flex items-center gap-4 text-white font-bold bg-accent py-[0.625rem] pl-4 pr-[6px] rounded-[0.25rem] max-w-fit">
+                <button class="font-outfit flex items-center gap-4 text-white bg-accent py-[0.625rem] pl-4 pr-[6px] rounded-[0.25rem] max-w-fit">
                     <span>Season: All</span>
                     <span><img src="/src/assets/arrow-down.svg" alt="Arrow down button"/></span>
                 </button>
-                <button class="flex items-center gap-4 text-white font-bold bg-accent py-[0.625rem] pl-4 pr-[6px] rounded-[0.25rem] max-w-fit">
+                <button class="font-outfit flex items-center gap-4 text-white bg-accent py-[0.625rem] pl-4 pr-[6px] rounded-[0.25rem] max-w-fit">
                     <span>Type: All</span>
                     <span><img src="/src/assets/arrow-down.svg" alt="Arrow down button"/></span>
                 </button>
@@ -94,7 +104,9 @@
         </div>
  
     </section>
-      <section id="faq-section-container" class="max-w-[80%] mx-auto py-[8rem] flex flex-col gap-5"></section>
+      <section id="faq-section-container" class="max-w-[90%] md:max-w-[80%] mx-auto py-[4.5rem] flex flex-col gap-5">
+       
+      </section>
       <footer class="bg-brown-300">
         <div class="text-center py-8 flex flex-col gap-8 text-gray">
           <p class="text-xl">Happy Foraging!</p>
