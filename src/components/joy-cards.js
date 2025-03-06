@@ -33,20 +33,21 @@ const benefits = [
 
 export function JoyCard(image, heading, body, className="flex-col", headingClass="text-primary", imageClass="") {
   return `
-        <li class="rounded-xl p-4 gap-6 bg-brown-200 flex ${className} justify-center w-full">
-          <figure class="w-full ${imageClass}">
-            <img src=${image.img} alt=${image.alt} class="rounded-xl w-full"/>
-            <figcaption></figcaption>
-          </figure>
-          <div class="flex flex-col gap-6">
-            <h2 class="${headingClass} font-outfit font-bold text-headingLg">${heading}</h2>
-            <p class="font-fira text-gray text-bodyReg">${body}</p>
-          </div>
-          
-        </li>
-    `;
+    <li class="rounded-xl p-4 gap-6 bg-brown-200 flex ${className} justify-center w-full">
+      <figure class="w-full ${imageClass}">
+        <picture class="h-full block">
+          ${image.img.mobile ? `<source media="(max-width: 900px)" srcset="${image.img.mobile}">` : ""}
+          ${image.img.desktop ? `<source media="(min-width: 901px)" srcset="${image.img.desktop}">` : ""}
+          <img src="${image.img}" alt="${image.alt}" class="rounded-xl w-full ${imageClass}">
+        </picture>
+      </figure>
+      <div class="flex flex-col gap-6">
+        <h2 class="${headingClass} font-outfit font-bold text-headingLg">${heading}</h2>
+        <p class="font-fira text-gray text-bodyReg">${body}</p>
+      </div>
+    </li>
+  `;
 }
-
 export function JoyCards() {
   return `
         <ul class="grid grid-cols-1 md:grid-cols-3 gap-6">

@@ -1,5 +1,6 @@
 import { JoyCard } from "./joy-cards";
 import mushroom from "../assets/mushroom.jpg"
+import mobile from "../assets/mushroom-mobile.jpg"
 import forage from "../assets/start-foraging.jpg"
 import cave from "../assets/where-to-find.jpg"
 import identify from "../assets/identify-mushrooms.jpg"
@@ -193,7 +194,8 @@ export const faqArray = [
             img: forage,
             alt: "A basket of mushrooms",
         },
-        className: "faq-a flex-col",
+        className: "faq-a flex-col justify-between max-w-grids",
+        imageClass: "max-h-full block min-h-[21rem]",
         headingClass: "text-white",
         heading: "What do I need to start mushroom foraging?",
         body: 
@@ -207,7 +209,8 @@ export const faqArray = [
             img: identify,
             alt: "A newspaper study of mushrooms",
         },
-        className: "faq-b flex-col",
+        className: "faq-b flex-col justify-between max-w-grids",
+        imageClass: "max-h-full block min-h-[21rem]",
         headingClass: "text-white",
         heading: "How can I identify edible mushrooms?",
         body: `
@@ -219,10 +222,13 @@ export const faqArray = [
     },
     {
         image: {
-            img: mushroom,
-            alt: "A single mushroom surrounded y foilage",
+            img: {
+                mobile: mobile,
+                desktop: mushroom,
+            },
+            alt: "A single mushroom surrounded by foilage",
         },
-        className: "faq-c flex-col",
+        className: "faq-c flex-col justify-between max-w-grids",
         headingClass: "text-white",
         heading: "What are the best seasons for mushroom foraging?",
         body: `Spring is ideal for morels, late summer brings chanterelles and boletes, 
@@ -235,9 +241,9 @@ export const faqArray = [
             img: cave,
             alt: "A mushroom under a leaf forage",
         },
-        className: "faq-d",
+        className: "faq-d flex-col md:flex-row",
         headingClass: "text-white",
-        imageClass: "flex-grow",
+        imageClass: "flex-grow w-full min-w-[20rem] block",
         heading: "Where can I find foraging spots?",
         body: `
             Look in deciduous forests, especially near oak and maple trees, and in damp, shaded areas. 
@@ -252,9 +258,9 @@ function GuideCards(guideArray) {
 
     return guideArray.map((guide) => (
         `
-        <div class="bg-brown-200 rounded-xl p-4 flex flex-col justify-between text-gray w-full">
+        <div class="bg-brown-200 rounded-xl p-4 flex flex-col gap-3 justify-between text-gray w-full font-fira">
             <div class="flex flex-col gap-3">
-                <p class="font-bold text-1.313rem">${guide.heading}</p>
+                <p class="font-bold font-outfit text-1.313rem">${guide.heading}</p>
                 <div class="flex items-center gap-2">
                     ${guide.tags.map((tag) => `
                         <span class="${tag.background} max-w-fit px-2">${tag.content}</span>
@@ -262,7 +268,7 @@ function GuideCards(guideArray) {
                 </div>
                 <p>${guide.content}</p>
             </div>
-            <p class="bg-brown-100 text-wrap rounded-md p-3">
+            <p class="bg-brown-100 text-wrap rounded-md p-3 min-w-fit">
                 <span>Important notes:</span> ${guide.note}
             </p>
         </div>
@@ -273,6 +279,7 @@ function GuideCards(guideArray) {
 
 export function FaqCards() {
   return `
+        <h1 class="font-bold text-heading md:!text-5xl text-white">Frequently asked Questions</h1>
         <ul class="faq-grid">
             ${faqArray.map((section) => JoyCard(section.image, section.heading, section.body, section.className, section.headingClass, section.imageClass)).join("")}
         </ul>
